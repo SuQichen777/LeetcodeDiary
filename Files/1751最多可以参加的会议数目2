@@ -1,0 +1,19 @@
+#include <vector>
+using namespace std;
+
+
+class Solution {
+public:
+    int maxValue(vector<vector<int>>& events, int k) {
+        //sort by start time
+        sort(events.begin(), events.end(), 
+            [](const vector<int>& a, const vector<int>& b) {
+                return a[0] < b[0];
+            });
+        //dp[i][j]表示前i个会议中选j个的最大价值
+        vector<vector<int>> dp;
+        dp.resize(events.size() + 1, vector<int>(k + 1, 0));
+
+        
+    }
+};
